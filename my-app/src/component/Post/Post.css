@@ -1,0 +1,120 @@
+.Post {
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin-bottom: 60px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+}
+.Post-user {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+.Post-user-avatar {
+  width: 40px;
+  height: 40px;
+}
+.Post-user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.Post-user-nickname {
+  margin-left: 12px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+
+.Post-user-location {
+  font-size: 10px;
+  font-weight: normal;
+}
+
+.Post-image-bg {
+  background-color: #efefef;
+}
+.Post-image img {
+  display: block;
+  width: 100%;
+}
+.Post-caption {
+  padding: 16px 16px;
+  font-size: 13px;
+}
+.Post-caption strong {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+}
+.Post-caption-description {
+  display: flex;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+.vjs-fade-out {
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.add-comment {
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+  padding-top: 10px;
+  width: 100%;
+  font-size: 13px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.comment-input {
+  border-style: none;
+  width: 90%;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  margin: 0px;
+  padding-left: 15px;
+}
+
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  font-size: 13px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+*:focus {
+  outline: none;
+  font-size: 13px;
+  font-family: 'PT Sans', sans-serif;
+  padding-bottom: 15px;
+  padding-top: 5px;
+  margin: 0px;
+  padding-left: 15px;
+}
+
+.post-button {
+  border-style: none;
+  margin-right: 14px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  font-weight: bold;
+  color: rgb(4, 163, 212);
+  padding: 0;
+  text-decoration: none !important;
+  border: none;
+}
+
+.post-button.disabled {
+  color: rgba(4, 163, 212, 0.596);
+}
+
+.default {
+  cursor: default;
+}
+
+.justify-between {
+  display: flex;
+  justify-content: space-between;
+}
