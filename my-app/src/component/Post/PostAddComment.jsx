@@ -1,23 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Button from 'react-bootstrap/Button';
 
 function PostAddComment(props) {
-  const [text, setText] = useState('');
-
-  const handleTextChange = e => {
-    setText(e.target.value);
-  };
+  const { replyRef, text, onCommentChange, onSubmit } = props;
 
   const postButtonClass =
     text.trim().length === 0 ? 'post-button disabled' : 'post-button';
-
-  const onSubmit = e => {
-    e.preventDefault();
-    if (text.trim() !== '') {
-      setText('');
-      props.onSubmit('Lawrence', text, '');
-    }
-  };
 
   const keyPress = e => {
     if (e.keyCode === 13) {
@@ -27,12 +15,13 @@ function PostAddComment(props) {
 
   return (
     <form className="add-comment">
-      <div className="justify-between">
+      <div className="justify-content">
         <input
+          ref={replyRef}
           className="comment-input"
           type="text"
           value={text}
-          onChange={handleTextChange}
+          onChange={onCommentChange}
           placeholder="Add a comment..."
           onKeyDown={keyPress}
         />

@@ -8,14 +8,36 @@
   margin-right: auto;
   width: 600px;
 }
+
+.Post-row {
+  border-radius: 3px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
+  margin-bottom: 60px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+}
+
+.Post-header-row {
+  width: 300px;
+  padding-left: 400px;
+  margin-left: 400px;
+}
+
 .Post-user {
   display: flex;
-  padding: 16px;
+  padding: 10px;
   align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.0975);
 }
 .Post-user-avatar {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 .Post-user-avatar img {
   width: 100%;
@@ -27,11 +49,16 @@
   margin-left: 12px;
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
+  font-size: 14px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .Post-user-location {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: normal;
+  width: 100%;
 }
 
 .Post-image-bg {
@@ -40,11 +67,39 @@
 .Post-image img {
   display: block;
   width: 100%;
+  height: 500px;
 }
 .Post-caption {
+  width: 100%;
   padding: 16px 16px;
+  padding-top: 0px;
   font-size: 13px;
 }
+
+::-webkit-scrollbar {
+  width: 0px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.Post-caption-row {
+  width: 100%;
+  padding: 16px 16px;
+  padding-top: 6px;
+  font-size: 13px;
+  height: 325px;
+  word-break: break-word;
+  overflow-y: scroll;
+}
+
+.Post-caption-row img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  margin-bottom: 15px;
+}
+
 .Post-caption strong {
   font-family: 'PT Sans', sans-serif;
   font-weight: bold;
@@ -55,6 +110,80 @@
   word-wrap: break-word;
   word-break: break-word;
 }
+
+.Post-caption-description-row {
+  display: flex;
+  justify-content: space-between;
+  word-wrap: break-word;
+  word-break: break-word;
+  width: 268px;
+  padding-top: 15px;
+}
+
+.Post-reply-description-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Post-caption-description-row img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+}
+
+.Comment-info {
+  margin-top: 5px;
+}
+
+.Time-elapsed {
+  opacity: 70%;
+  font-size: 12px;
+  margin-right: 10px;
+}
+
+.Comment-likes {
+  margin-right: 10px;
+  font-size: 12px;
+  opacity: 70%;
+  font-weight: 550;
+}
+
+.Reply-btn {
+  font-size: 12px;
+  opacity: 70%;
+  font-weight: 550;
+}
+
+.View-replies {
+  margin-top: 2px;
+  width: 110px;
+  text-align: right;
+  overflow: hidden;
+}
+
+.View-replies:before,
+.View-replies:after {
+  background-color: rgba(0, 0, 0, 0.479);
+  content: '';
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.View-replies:before {
+  right: 0.5em;
+  margin-left: -50%;
+}
+
+.View-replies:after {
+  left: 0.5em;
+  margin-right: -50%;
+}
+
 .vjs-fade-out {
   display: none;
   visibility: hidden;
@@ -64,9 +193,12 @@
 .add-comment {
   border-top: 1px solid rgba(0, 0, 0, 0.0975);
   padding-top: 10px;
-  width: 100%;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'PT Sans', sans-serif;
+}
+
+.More-comment {
+  margin-bottom: 8px;
 }
 
 .comment-input {
@@ -80,13 +212,13 @@
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'PT Sans', sans-serif;
 }
 
 *:focus {
   outline: none;
-  font-size: 13px;
+  font-size: 12px;
   font-family: 'PT Sans', sans-serif;
   padding-bottom: 15px;
   padding-top: 5px;
@@ -98,7 +230,7 @@
   border-style: none;
   margin-right: 14px;
   margin-bottom: 10px;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   color: rgb(4, 163, 212);
   padding: 0;
@@ -110,11 +242,47 @@
   color: rgba(4, 163, 212, 0.596);
 }
 
-.default {
-  cursor: default;
+.number-of-likes {
+  padding-left: 18px;
+  font-size: 13px;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 550;
 }
 
-.justify-between {
+.Action-icons {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  border-top: 1px solid rgba(0, 0, 0, 0.0975);
+}
+
+.heart-class {
+  margin-left: 18px;
+}
+
+.Heart-reply {
+  margin-right: -13px;
+  margin-left: 3px;
+  margin-top: 3px;
+}
+
+.Heart-comment {
+  margin-top: 10px;
+}
+
+.red {
+  color: rgba(255, 0, 0, 0.596);
+  -webkit-text-stroke: 1px black;
+}
+
+.Flex {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+}
+
+.More-options {
+  font-size: 17px;
+  padding-right: 6px;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-family: 'PT Sans', sans-serif;
 }

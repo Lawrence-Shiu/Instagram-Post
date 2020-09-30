@@ -42,5 +42,15 @@
 }
 
 .muted {
-  opacity: 0.5;
+  opacity: 0.6;
+  font-weight: 600;
+}
+
+.default {
+  cursor: default;
+}
+
+.justify-content {
+  display: flex;
+  justify-content: space-between;
 }
